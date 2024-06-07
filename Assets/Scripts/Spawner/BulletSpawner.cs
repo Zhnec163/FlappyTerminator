@@ -34,8 +34,8 @@ public class BulletSpawner : MonoBehaviour
     {
         _pool = new ObjectPool<Bullet>
         (
-            createFunc: () => HandleActionOnCreate(),
-            actionOnGet: obj => HandleActionOnGet(obj),
+            createFunc: HandleActionOnCreate,
+            actionOnGet:  HandleActionOnGet,
             actionOnRelease: obj => HandleActionOnRelease(obj),
             actionOnDestroy: obj => HandleActionOnDestroy(obj),
             defaultCapacity: _poolCapacity,
