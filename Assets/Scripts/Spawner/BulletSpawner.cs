@@ -11,8 +11,7 @@ public class BulletSpawner : MonoBehaviour
     
     private Bullet HandleActionOnCreate()
     {
-        Bullet bullet = Instantiate(_prefab);
-        return bullet;
+        return Instantiate(_prefab);
     }
     
     private void HandleActionOnGet(Bullet bullet)

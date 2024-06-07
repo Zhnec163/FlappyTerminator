@@ -4,7 +4,7 @@ public abstract class Shooter : MonoBehaviour
 {
     private float _bulletSpeed;
     private BulletSpawner _bulletSpawner;
-    private float offsetX = 1.5F;
+    private float _offsetX = 1.5F;
 
     public void Init(float bulletSpeed, BulletSpawner bulletSpawner)
     {
@@ -15,7 +15,7 @@ public abstract class Shooter : MonoBehaviour
     public void Shooting()
     {
         Bullet bullet = _bulletSpawner.Get();
-        bullet.transform.position = transform.position + transform.up * offsetX;
+        bullet.transform.position = transform.position + transform.up * _offsetX;
         bullet.transform.rotation = transform.rotation;
         bullet.Init(_bulletSpeed, HandleBulletCollision);
     }

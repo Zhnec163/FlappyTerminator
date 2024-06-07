@@ -10,9 +10,4 @@ public class Player : Character
     {
         GetComponent<PlayerShooter>().Init(_bulletSpeed, _bulletSpawner);
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        base.OnCollisionEnter2D(collision);
-    }
 }
